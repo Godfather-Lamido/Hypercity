@@ -222,6 +222,30 @@ for (let i = 0; i < 5; i++) {
     console.log(i)
 } */
 
-for (let number = 0; number <= 12; number = number + 2) {
-    console.log(number)
+// for (let number = 0; number <= 12; number = number + 2) {
+//     console.log(number)
+// }
+
+// write a function that reverse a word 
+//1st2
+function isPalindrome(word) {
+    let reversed = word.split("").reverse().join("");
+    return word === reversed;
 }
+
+console.log(isPalindrome("madam"))
+console.log(isPalindrome("hello")) 
+
+
+//2nd
+function isPalindrome(word) {
+    let reversed = "";
+
+    for (let i = word.length - 1; i >= 0; i--) {
+        reversed = reversed + word[i];
+    }
+    return word === reversed;
+}
+
+console.log(isPalindrome("madam"))
+console.log(isPalindrome("hello")) 

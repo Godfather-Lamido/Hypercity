@@ -9,90 +9,90 @@ const categories = [
   },
   {
     id: 2,
-    icon: "",
+    icon: "cake.svg",
     title: "Electronics",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 3,
-    icon: "",
+    icon: "cake.svg",
     title: "Groceries",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 4,
-    icon: "",
+    icon: "cake.svg",
     title: "Phones",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 5,
-    icon: "",
+    icon: "cake.svg",
     title: "Laptops",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 6,
-    icon: "",
+    icon: "cake.svg",
     title: "Wine & Spirits",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 7,
-    icon: "",
+    icon: "cake.svg",
     title: "Home Furnishing",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 8,
-    icon: "",
+    icon: "cake.svg",
     title: "Stationery",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 9,
-    icon: "",
+    icon: "cake.svg",
     title: "Toys & Games",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 10,
-    icon: "",
+    icon: "cake.svg",
     title: "Lifestyle",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 11,
-    icon: "",
+    icon: "cake.svg",
     title: "Butchery",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
   {
     id: 12,
-    icon: "",
+    icon: "cake.svg",
     title: "Fresh Fruits & Vegetables",
-    subCategories: ['laptops', 'lamps', 'Gadgets', 'electric kettles'],
+    subCategories: ["laptops", "lamps", "Gadgets", "electric kettles"],
   },
 ];
 
-const buildCategoryContent = () => {
-  categories.map((item, index) => {
+const buildCategoryContent = () => {  
+  categories.forEach((item) => {
     return buildEachCategory(item.title, item.icon, item.subCategories);
   });
 };
 
-const buildEachCategory = (label, icon, subCategories) => {
+const buildEachCategory = (title, icon, subCategories) => {
   const eachCategory = document.createElement("div");
   eachCategory.className = "each-category";
   eachCategory.innerHTML = `
-    <div style="margin-bottom: 14px; padding-bottom:10px;.;l border-bottom: 1px solid #D9D9D9; width:100%; display:flex; flex-direction:row; justify-content:space-between; align-items:center">
-      <div style="display:flex; flex-direction:row; gap:15px; align-items:center; font-size:14px; color:#090B0E;"> 
+    <div style="margin-bottom: 5px; padding-bottom:10px; border-bottom: 1px solid black; width:100%; display:flex; flex-direction:row; justify-content:space-between; align-items:center font-size:8px; color:#090B0E;">
+      <div style="display:flex; flex-direction:row; gap:15px; align-items:center; color:#090B0E;"> 
         <img
           src="./Assests/icons/${icon}"
           alt="cake-icon"          
-          width="24px"
+          width="18px"
         />
-        <p>${label}</p>
+        <p>${title}</p>
       </div>
       
       <img 
@@ -102,18 +102,29 @@ const buildEachCategory = (label, icon, subCategories) => {
       />
     </div>    
       `;
-    subCategories.map((item, index)=>{
-        return buildSubCategory(item, eachCategory)
-    })
+
+   subCategories.forEach((item) => {
+    return buildSubCategory(item, eachCategory);
+  });
+
   categoryBox.appendChild(eachCategory);
 };
 
-const buildSubCategory = (item, eachCategory) =>{
-    const subCategory = document.createElement('div');
-    subCategory.className = 'subcategory'
-    subCategory.innerHTML = `<p> ${item} </p>`
+const buildSubCategory = (item, eachCategory) => {
+  const subCategory = document.createElement("div");
+  subCategory.className = "subcategory";
+  subCategory.style.display = "none";
+  subCategory.innerHTML = `<p> ${item} </p>`;
 
-    eachCategory.appendChild(subCategory)
-}
+  eachCategory.addEventListener("click", () => {
+    // console.log(subCategory.style.display);
+    if (subCategory.style.display === "flex") {
+      subCategory.style.display = "none";
+    } else if (subCategory.style.display === "none") {
+      subCategory.style.display = "flex";
+    }
+  });
+  eachCategory.appendChild(subCategory);
+};
 
 buildCategoryContent();
