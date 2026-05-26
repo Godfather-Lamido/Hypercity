@@ -1,30 +1,30 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
-  padding: 25px 80px 0px 80px;
 }
 
 .navbar {
-  padding: 10px;
+  padding: 10px 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 30px;
   align-items: center;
   margin-bottom: 46px;
-  /* background: red; */
 }
 
 .navbar .logobox {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: fit-content;
 }
 
 .logobox .hyperCityLogo {
@@ -36,12 +36,12 @@ body {
 }
 
 .navbar .searchBar {
-  width: 50%;
+  flex: 1 1 300px;
   height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  border: 1px solid #a3adbb;
+  border: 1px solid #353536;
   border-radius: 30px;
 }
 
@@ -55,6 +55,23 @@ body {
   font-size: 14px;
 }
 
+.search-bar {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-bar {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-bar,
+.search-bar i {
+  font-size: 20px;
+}
+
 .navbar button {
   background: #f7d117;
   border: 1px solid #a3adbb;
@@ -66,7 +83,7 @@ body {
   cursor: pointer;
 }
 
-.navbar .navsection {
+.navbar > .navsection {
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -107,12 +124,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 75vh;
   width: 70%;
   gap: 32px;
   /* margin-bottom: 71px; */
 }
 
 .hyper-content img {
+  height: 100%;
   width: 100%;
 }
 
@@ -205,8 +224,13 @@ body {
   color: white;
 }
 
+.middleSection {
+  padding: 25px 80px 0px 80px;
+}
+
 .collection-menu {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin-bottom: 90px;
   gap: 30px;
@@ -217,21 +241,40 @@ body {
   overflow: hidden;
   border-radius: 30px;
   height: 500px;
-  flex: 1;
+  flex: 1 0 300px;
 }
 
 .collection-location {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  flex: 1 0 300px;
+  height: 500px;
 }
 
 .collection-location-card {
   position: relative;
   overflow: hidden;
-  width: 400px;
-  height: 235px;
+  width: 100%;
+  height: 250px;
+  border-radius: 30px;
+}
+
+.collection-location-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 4rem;
+  /* height: 500px; */
+}
+
+.collection-location-card-bottom {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  flex: 1 0 300px;
   border-radius: 30px;
 }
 
@@ -302,22 +345,343 @@ body {
 }
 
 .featuredProductsLayout {
+  /* background: #debc15; */
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: start;
-  align-items: start;
-  width: 100%;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 4rem;
 }
 
 .each-product {
+  position: relative;
+  display: flex;
+  flex: 1 0 220px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  /* padding: 32px 19px; */
+  padding: 20px;
   width: 100%;
-  /* display: flex;
+  height: 100%;
+}
+
+.heart-icon {
+  position: absolute;
+  background: #f0ecec;
+  border-radius: 50%;
+  padding: 5px;
+  top: 20px;
+  right: 20px;
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.product-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.product-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.add-to-cart {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.add-to-cart-btn {
+  background: #debc15;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 15px 35px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  flex-direction: col;
-  cursor: pointer; 
-  padding-bottom: 14px;
-  border-bottom: 1px solid #D9D9D9; */
+  cursor: pointer;
+}
+
+.topDeals {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 14px;
+}
+
+.topDealsLayout {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 4rem;
+}
+
+.each-deals {
+  position: relative;
+  display: flex;
+  flex: 1 0 200px;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 32px 19px;
+  width: 100%;
+  height: 100%;
+}
+
+.flash-sale p {
+  font-size: 11px;
+  padding: 10px;
+  top: 20px;
+  left: 20px;
+  border-radius: 15px;
+  background: #debc15;
+  position: absolute;
+  margin-bottom: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.specialDays {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 14px;
+}
+
+.specialDaysLayout {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 4rem;
+}
+
+.each-specialDays {
+  position: relative;
+  display: flex;
+  flex: 1 0 220px;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  /* padding: 20px; */
+  padding: 32px 19px;
+  width: 100%;
+  height: 100%;
+}
+
+.limitedStockDeals {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  gap: 14px;
+}
+
+.limitedStockDealsLayout {
+  /* background: #debc15; */
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 4rem;
+}
+
+.each-StockDeals {
+  position: relative;
+  display: flex;
+  flex: 1 0 220px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  /* padding: 32px 19px; */
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  line-height: 1.3;
+  padding: 30px 80px;
+  font-size: 12px;
+  gap: 20px;
+}
+
+.footer-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-brand ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: #debc15;
+  border: none;
+  outline: none;
+}
+
+.footer-dets {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 0 120px;
+}
+
+.dets ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-logobox {
+  display: flex;
+  align-items: center;
+  background: #debc15;
+  width: fit-content;
+}
+
+.footer-hyperCityLogo {
+  width: 150px;
+}
+
+.footer-logobox .clogo {
+  width: 40px;
+}
+
+@media screen and (max-width: 1120px) {
+  .hyper-section > .category-layout {
+    display: none;
+  }
+
+  .hyper-section > .hyper-content {
+    width: 100%;
+  }
+
+  .hyper-content img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+  }
+
+  .hyper-section .hyper-dets {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+
+  .navbar > .navsection {
+    display: none;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .middleSection {
+    padding: 25px 30px 0px 30px;
+  }
+
+  .footer {
+    padding: 30px 30px;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hyperCityLogo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navbar .searchBar {
+    display: none;
+  }
+
+  .search-bar {
+    display: block;
+  }
 }

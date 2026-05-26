@@ -1,5 +1,7 @@
 const categoryBox = document.getElementById("categoryBox");
 
+
+
 const categories = [
   {
     id: 1,
@@ -107,7 +109,7 @@ const buildEachCategory = (title, icon, subCategories) => {
     return buildSubCategory(item, eachCategory);
   });
 
-  categoryBox.appendChild(eachCategory);
+  categoryBox?.appendChild(eachCategory);
 };
 
 const buildSubCategory = (item, eachCategory) => {
@@ -124,7 +126,7 @@ const buildSubCategory = (item, eachCategory) => {
       subCategory.style.display = "flex";
     }
   });
-  eachCategory.appendChild(subCategory);
+  eachCategory?.appendChild(subCategory);
 };
 
 buildCategoryContent();

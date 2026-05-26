@@ -1,6 +1,6 @@
-const featuredProducts = document.getElementById("featuredProducts");
+const limitedStockDeals = document.getElementById("limitedStockDeals");
 
-const featuredProductsList = [
+const limitedStockDealsList = [
   {
     id: 1,
     icon1: "heart.svg",
@@ -83,16 +83,16 @@ const featuredProductsList = [
   },
 ];
 
-const buildFeaturedProducts = () => {
-  featuredProductsList.forEach((item) => {
-    return buildEachProducts(item.icon1, item.image, item.description, item.price1, item.price2);
+const buildLimitedStockDeals = () => {
+  limitedStockDealsList.forEach((item) => {
+    return buildEachLimitedStockDeals(item.icon1, item.image, item.description, item.price1, item.price2);
   });
 };
 
-const buildEachProducts = (icon, image, description, price1, price2) => {
-  const eachProduct = document.createElement("div");
-  eachProduct.className = "each-product";
-  eachProduct.innerHTML = `
+const buildEachLimitedStockDeals = (icon, image, description, price1, price2) => {
+  const eachStockDeals = document.createElement("div");
+  eachStockDeals.className = "each-StockDeals";
+  eachStockDeals.innerHTML = `
     <img src="./Assests/icons/${icon}" class="heart-icon" alt="heart-icon">
     <img src="${image}" alt="product-image" width="100%" object-fit="contain">
 
@@ -109,8 +109,7 @@ const buildEachProducts = (icon, image, description, price1, price2) => {
       </button>
     </div>
   `;
-  // console.log(featuredProducts.className);
-  featuredProducts?.appendChild(eachProduct);
+  limitedStockDeals?.appendChild(eachStockDeals);
 }
 
-buildFeaturedProducts();
+buildLimitedStockDeals();

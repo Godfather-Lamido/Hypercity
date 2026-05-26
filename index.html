@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>hypercity1</title>
     <link rel="stylesheet" href="./Style/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -27,7 +31,6 @@
           />
         </button>
       </search>
-
       <ul class="navsection">
         <li class="loginBox">
           <img
@@ -47,80 +50,153 @@
           <p>Cart (0)</p>
         </li>
       </ul>
+      <div style="display: flex; gap:10px; align-items: center;">
+        <div class="search-bar" id="searchBar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="menu-bar" id="menubar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
     </nav>
 
-    <section class="hyper-section">
-      <div class="category-layout">
-        <div class="category-title">
+    <div class="middleSection">
+      <section class="hyper-section">
+        <div class="category-layout">
+          <div class="category-title">
+            <img
+              src="./Assests/icons/menu.svg"
+              width="24px"
+              style="cursor: pointer"
+              alt="menu-icon"
+            />
+            <p>Shop by Category</p>
+
+            <div class="category-menu-bar" id="menubar">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+
+          <div class="category-contents" id="categoryBox"></div>
+        </div>
+
+        <div class="hyper-content">
+          <img src="./Assests/images/Frame 36.svg" alt="hypercity-img" />
+
+          <div class="hyper-dets">
+            <div class="hyper-info">
+              <img src="./Assests/icons/truck-fast.svg" alt="delivery-icon" />
+
+              <div class="hyper-order">
+                <p>Home Delivery</p>
+                <p style="color: #546881; font-family: Work Sans">
+                  Free Shipping On All Order
+                </p>
+              </div>
+              <div style="width: 2px; height: 20px; background: #b2bbc6"></div>
+            </div>
+
+            <div class="hyper-info">
+              <img src="./Assests/icons/call.svg" alt="delivery-icon" />
+              <div class="hyper-order">
+                <p>Online Support</p>
+                <p style="color: #546881" font-family: Work Sans;>
+                  Technical online support 24/7
+                </p>
+              </div>
+              <div style="width: 2px; height: 20px; background: #b2bbc6"></div>
+            </div>
+
+            <div class="hyper-info">
+              <img src="./Assests/icons/card-tick.svg" alt="delivery-icon" />
+              <div class="hyper-order">
+                <p>Low Price</p>
+                <p style="color: #546881; font-family: Work Sans">
+                  Enjoy low price every weekend
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-menu">
+        <div class="collection-card">
           <img
-            src="./Assests/icons/menu.svg"
-            width="24px"
-            style="cursor: pointer"
-            alt="menu-icon"
+            src="./Assests/images/men.jpg"
+            alt="men-collection"
+            class="collection-card-img"
           />
-          <p>Shop by Category</p>
+
+          <div class="collection-card-text">
+            <h1 class="collection-card-title">
+              Men <br />
+              Collection
+            </h1>
+            <button class="collection-card-button">Shop Now</button>
+          </div>
         </div>
 
-        <div class="category-contents" id="categoryBox">
-            
-        </div>
-      </div>
-
-      <div class="hyper-content">
-        <img src="./Assests/images/Frame 36.svg" alt="hypercity-img" />
-
-        <div class="hyper-dets">
-          <div class="hyper-info">
-            <img src="./Assests/icons/truck-fast.svg" alt="delivery-icon" />
-
-            <div class="hyper-order">
-              <p>Home Delivery</p>
-              <p style="color: #546881; font-family: Work Sans">
-                Free Shipping On All Order
-              </p>
+        <div class="collection-location">
+          <div class="collection-location-card">
+            <img
+              src="./Assests/images/shop.jpg"
+              alt="shop-accessories"
+              class="collection-card-img"
+            />
+            <div class="collection-location-card-text">
+              <p class="collection-card-subtitle">Shop</p>
+              <h1 class="collection-card-title">Accessories</h1>
+              <button class="collection-card-button">Shop Now</button>
             </div>
-            <div style="width: 2px; height: 20px; background: #b2bbc6"></div>
           </div>
 
-          <div class="hyper-info">
-            <img src="./Assests/icons/call.svg" alt="delivery-icon" />
-            <div class="hyper-order">
-              <p>Online Support</p>
-              <p style="color: #546881" font-family: Work Sans;>
-                Technical online support 24/7
-              </p>
-            </div>
-            <div style="width: 2px; height: 20px; background: #b2bbc6"></div>
-          </div>
+          <div class="collection-location-card">
+            <img
+              src="./Assests/images/home.jpg"
+              alt="home-accessories"
+              class="collection-card-img"
+            />
 
-          <div class="hyper-info">
-            <img src="./Assests/icons/card-tick.svg" alt="delivery-icon" />
-            <div class="hyper-order">
-              <p>Low Price</p>
-              <p style="color: #546881; font-family: Work Sans">
-                Enjoy low price every weekend
-              </p>
+            <div class="collection-location-card-text">
+              <p class="collection-card-subtitle">Home</p>
+              <h1 class="collection-card-title">Accessories</h1>
+              <button class="collection-card-button">Shop Now</button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="collection-menu">
+        <div class="collection-card">
+          <img
+            src="./Assests/images/women.jpg"
+            alt="men-collection"
+            class="collection-card-img"
+          />
 
-      <div class="collection-card">
-        <img src="./Assests/images/men.jpg" alt="men-collection" class="collection-card-img">
-
-        <div class="collection-card-text">
-          <h1 class="collection-card-title">Men <br> Collection</h1>
-          <button class="collection-card-button">Shop Now</button>
+          <div class="collection-card-text">
+            <h1 class="collection-card-title">
+              Women <br />
+              Collection
+            </h1>
+            <button class="collection-card-button">Shop Now</button>
+          </div>
         </div>
+      </section>
+
+      <div class="featuredProducts" id="featuredProductsBox">
+        <h1 style="text-align: center; margin-bottom: 1rem">
+          Featured Products
+        </h1>
+        <div class="featuredProductsLayout" id="featuredProducts"></div>
       </div>
 
-      <div class="collection-location">
-        
-        <div class="collection-location-card">
-          <img src="./Assests/images/shop.jpg" alt="shop-accessories" class="collection-card-img">
+      <section class="collection-location-bottom">
+        <div class="collection-location-card-bottom">
+          <img
+            src="./Assests/images/shop.jpg"
+            alt="shop-accessories"
+            class="collection-card-img"
+          />
           <div class="collection-location-card-text">
             <p class="collection-card-subtitle">Shop</p>
             <h1 class="collection-card-title">Accessories</h1>
@@ -128,38 +204,111 @@
           </div>
         </div>
 
-        <div class="collection-location-card">
-          <img src="./Assests/images/home.jpg" alt="home-accessories" class="collection-card-img">
-          
+        <div class="collection-location-card-bottom">
+          <img
+            src="./Assests/images/home.jpg"
+            alt="home-accessories"
+            class="collection-card-img"
+          />
+
           <div class="collection-location-card-text">
             <p class="collection-card-subtitle">Home</p>
             <h1 class="collection-card-title">Accessories</h1>
             <button class="collection-card-button">Shop Now</button>
           </div>
         </div>
-      
+      </section>
+
+      <div class="topDeals" id="topDealsBox">
+        <h1 style="text-align: center; margin-bottom: 1rem">Top Deals</h1>
+        <div class="topDealsLayout" id="topDeals"></div>
       </div>
 
-      <div class="collection-card">
-        <img src="./Assests/images/women.jpg" alt="men-collection" class="collection-card-img">
-
-        <div class="collection-card-text">
-          <h1 class="collection-card-title">Women <br> Collection</h1>
-          <button class="collection-card-button">Shop Now</button>
-        </div>
+      <div class="specialDays" id="specailDaysBox">
+        <h1 style="text-align: center; margin-bottom: 1rem">Special Days</h1>
+        <div class="specialDaysLayout" id="specialDays"></div>
       </div>
-    </section>
 
-    <div class="featuredProducts" id="featuredProductsBox">
-      <h1 style="text-align: center;">Featured Products</h1>
-      <div class="featuredProductsLayout" id="featuredProducts">
-        
+      <div class="limitedStockDeals" id="limitedStockDealsBox">
+        <h1 style="text-align: center; margin-bottom: 1rem">
+          Limited Stock Deals
+        </h1>
+        <div class="limitedStockDealsLayout" id="limitedStockDeals"></div>
       </div>
     </div>
-  
 
+    <footer class="footer">
+      <div class="footer-info">
+        <div class="footer-brand">
+          <div style="background: #debc15" class="footer-logobox">
+            <img
+              src="./Assests/icons/image 2.svg"
+              alt="hyperCity"
+              class="footer-hyperCityLogo"
+            />
+            <img src="./Assests/icons/logo.svg" alt="c-logo" class="clogo" />
+          </div>
+
+          <p>
+            A new chain of Modern Supermarket/Hypermarket stores <br />
+            in Nigeria
+          </p>
+          <ul>
+            <li><i class="fa-brands fa-facebook-f"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+            <li><i class="fa-brands fa-youtube"></i></li>
+          </ul>
+        </div>
+
+        <div class="footer-dets">
+          <div class="dets">
+            <p style="font-size: 16px">Company</p>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Vision</li>
+            </ul>
+          </div>
+
+          <div class="dets">
+            <p style="font-size: 16px">Quick Links</p>
+            <ul>
+              <li>Top Deals</li>
+              <li>Whitepaper</li>
+            </ul>
+          </div>
+
+          <div class="dets">
+            <p style="font-size: 16px">Address</p>
+            <ul>
+              <li>
+                Eastern Bypass Roundabout, Ogbunabali, Port Harcourt, <br />
+                Rivers, Nigeria.
+              </li>
+              <li>
+                Tombia Road, Opposite Polo Club, New GRA, Port <br />
+                Harcourt, Rivers, Nigeria.
+              </li>
+              <li>
+                Ikoku Junction, Olu-Obasanjo Road, Adjacent Ikwerre Road, <br />
+                Port Harcourt, Rivers, Nigeria.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div style="width: 100%; height: 1px; background: #b2bbc6"></div>
+        <p>© 2024 Hypercity. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
   <script src="./Controller/categorySection.js"></script>
   <script src="./Controller/productSection.js"></script>
-  
+  <script src="./Controller/topDealsSection.js"></script>
+  <script src="./Controller/specialDaysSection.js"></script>
+  <script src="./Controller/limitedStockDealsSection.js"></script>
 </html>
