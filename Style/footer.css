@@ -1,0 +1,78 @@
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  line-height: 1.3;
+  padding: 30px 80px;
+  font-size: 12px;
+  gap: 20px;
+}
+
+.footer-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-brand ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: #debc15;
+  border: none;
+  outline: none;
+}
+
+.footer-dets {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 0 120px;
+}
+
+.dets ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-logobox {
+  display: flex;
+  align-items: center;
+  background: #debc15;
+  width: fit-content;
+}
+
+.footer-hyperCityLogo {
+  width: 150px;
+}
+
+.footer-logobox .clogo {
+  width: 40px;
+}
+

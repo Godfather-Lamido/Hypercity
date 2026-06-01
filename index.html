@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hypercity1</title>
     <link rel="stylesheet" href="./Style/app.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./Style/responsive.css" />
+    <link rel="stylesheet" href="./Style/featuredProducts.css" />
+    <link rel="stylesheet" href="./Style/topDeals.css" />
+    <link rel="stylesheet" href="./Style/specialDays.css" />
+    <link rel="stylesheet" href="./Style/limitedStockDeals.css" />
+    <link rel="stylesheet" href="./Style/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
   </head>
   <body>
     <nav class="navbar">
-      <div class="logobox">
+      <div class="logobox" style="display: flex; gap:10px; align-items: center;">
+        <div class="category-menu-bar" id="categoryMenuBar">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="category-cancel-bar" id="categoryCancelBar">
+          <i class="fa-solid fa-x"></i>
+        </div>
         <img
           src="./Assests/icons/image 2.svg"
           alt="hyperCity"
@@ -62,7 +71,7 @@
 
     <div class="middleSection">
       <section class="hyper-section">
-        <div class="category-layout">
+        <div class="category-layout" id="categoryLayout">
           <div class="category-title">
             <img
               src="./Assests/icons/menu.svg"
@@ -71,13 +80,11 @@
               alt="menu-icon"
             />
             <p>Shop by Category</p>
-
-            <div class="category-menu-bar" id="menubar">
-              <i class="fa-solid fa-bars"></i>
-            </div>
           </div>
 
-          <div class="category-contents" id="categoryBox"></div>
+          <div class="category-contents" id="categoryBox">
+          </div>
+
         </div>
 
         <div class="hyper-content">

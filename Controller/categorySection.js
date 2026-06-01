@@ -1,6 +1,38 @@
 const categoryBox = document.getElementById("categoryBox");
+const categoryLayout = document.getElementById("categoryLayout");
+const categoryMenuBar = document.getElementById("categoryMenuBar");
+const categoryCancelBar = document.getElementById("categoryCancelBar");
 
+categoryMenuBar.addEventListener("click", () => {
+  categoryLayout.style.display = "block";
+  categoryCancelBar.style.display = "block";
+  categoryMenuBar.style.display = "none";
+});
 
+categoryCancelBar.addEventListener("click", () => {
+  categoryLayout.style.display = "";
+  categoryCancelBar.style.display = "";
+  categoryMenuBar.style.display = "block";
+});
+
+window.addEventListener("resize", () => {
+  console.log("folaaaa");
+  if (window.innerWidth >= 1120) {
+    console.log("working...");
+    categoryLayout.style.position = "static";
+  } else {
+    categoryLayout.style.position = "absolute";
+    categoryLayout.style.display = "";
+  }
+});
+
+// categoryCancelBar.addEventListener("click", () => {
+//   if (categoryLayout.style.display === "block") {
+//     categoryLayout.style.display = "";
+//   } else if (categoryLayout.style.display === "") {
+//     categoryLayout.style.display = "block";
+//   }
+// });
 
 const categories = [
   {
@@ -77,7 +109,7 @@ const categories = [
   },
 ];
 
-const buildCategoryContent = () => {  
+const buildCategoryContent = () => {
   categories.forEach((item) => {
     return buildEachCategory(item.title, item.icon, item.subCategories);
   });
@@ -105,7 +137,7 @@ const buildEachCategory = (title, icon, subCategories) => {
     </div>    
       `;
 
-   subCategories.forEach((item) => {
+  subCategories.forEach((item) => {
     return buildSubCategory(item, eachCategory);
   });
 

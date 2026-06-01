@@ -1,0 +1,49 @@
+.topDeals {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 14px;
+}
+
+.topDealsLayout {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 4rem;
+}
+
+.each-deals {
+  position: relative;
+  display: flex;
+  flex: 1 0 200px;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 32px 19px;
+  width: 100%;
+  height: 100%;
+}
+
+.flash-sale p {
+  font-size: 11px;
+  padding: 10px;
+  top: 20px;
+  left: 20px;
+  border-radius: 15px;
+  background: #debc15;
+  position: absolute;
+  margin-bottom: 30px;
+  object-fit: contain;
+  cursor: pointer;
+  font-weight: bold;
+}

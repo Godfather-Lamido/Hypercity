@@ -1,0 +1,70 @@
+
+@media screen and (max-width: 1120px) {
+  .hyper-section > .category-layout {
+    display: none;
+  }
+
+  .menu-bar,
+  .category-menu-bar {
+    display: block;
+  }
+
+  /* .category-cancel-bar{
+    display: none;
+  } */
+
+  .hyper-section > .hyper-content {
+    width: 100%;
+  }
+
+  .hyper-content img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+  }
+
+  .hyper-section .hyper-dets {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar {
+    padding: 10px 30px;
+  }
+
+  .navbar > .navsection {
+    display: none;
+  }
+
+  .middleSection {
+    padding: 25px 30px 0px 30px;
+  }
+
+  .footer {
+    padding: 30px 30px;
+  }
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hyperCityLogo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .navbar .searchBar {
+    display: none;
+  }
+
+  .search-bar {
+    display: block;
+  }
+}
