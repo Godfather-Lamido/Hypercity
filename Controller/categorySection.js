@@ -26,14 +26,6 @@ window.addEventListener("resize", () => {
   }
 });
 
-// categoryCancelBar.addEventListener("click", () => {
-//   if (categoryLayout.style.display === "block") {
-//     categoryLayout.style.display = "";
-//   } else if (categoryLayout.style.display === "") {
-//     categoryLayout.style.display = "block";
-//   }
-// });
-
 const categories = [
   {
     id: 1,

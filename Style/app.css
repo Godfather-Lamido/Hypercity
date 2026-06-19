@@ -61,8 +61,7 @@ body {
   cursor: pointer;
 }
 
-.menu-bar,
-.category-cancel-bar {
+.menu-bar {
   display: none;
   font-size: 20px;
   cursor: pointer;
